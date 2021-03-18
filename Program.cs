@@ -13,8 +13,8 @@ namespace ByteBank
         {
             GerenciadorBonificacao gerenciador = new GerenciadorBonificacao();
 
-            Funcionario carlos = new Funcionario(0);
-            Diretor roberta = new Diretor(1);
+            Funcionario carlos = new Funcionario();
+            Diretor roberta = new Diretor();
 
 
             carlos.Nome = "Carlos";
