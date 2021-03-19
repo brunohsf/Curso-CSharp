@@ -30,11 +30,11 @@ namespace ByteBank
 
             GerenteDeConta camila = new GerenteDeConta(4000, "326.985.628-89");
             camila.Nome = "Camila";
-            camila.Salario = "abc";
+            camila.Senha = "abc";
 
 
             sistemaInterno.Logar(roberta, "123");
-            sistemaInterno.Logar(roberta, "abc");
+            sistemaInterno.Logar(camila, "abc");
 
         }
 
