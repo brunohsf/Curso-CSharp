@@ -10,17 +10,20 @@ namespace ByteBank.Sistemas
     public class SistemaInterno
     {
 
-        public bool Logar(Autenticavel diretor, string senha)
+        public bool Logar(IAutenticavel funcionario, string senha)
         {
-            bool usuarioAutenticado = diretor.Autenticar(senha);
+            bool usuarioAutenticado = funcionario.Autenticar(senha);
 
-            if (!diretor.Autenticar(senha))
+            if (usuarioAutenticado)
+            {
+                Console.WriteLine($"Bem-vindo ao sistema!");
+                return true;
+            }
+            else
             {
                 Console.WriteLine("Senha incorreta!");
                 return false;
             }
-            Console.WriteLine($"Bem vindo ao sistema, {diretor.Nome}!");
-            return true;
         }
 
     }
